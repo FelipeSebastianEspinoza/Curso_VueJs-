@@ -1,6 +1,5 @@
 <html lang="en">
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -19,13 +18,20 @@
       </div>
     </div>
     <!---->
+    <!--Vue Js-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!---->
   </head>
   <body>
     <div id="elemento">
       {{contenido}}
       <div>
-        <input type="text" v-model="nuevoLenguaje" />
-        <input type="text" v-model="nuevoLink" />
+        <input
+          type="text"
+          v-model="nuevoLenguaje"
+          @keyup.enter="agregarLenguaje"
+        />
+        <input type="text" v-model="nuevoLink" @keyup.enter="agregarLenguaje" />
         <button @click="agregarLenguaje">Agregar Lenguaje</button>
       </div>
       <div>
@@ -33,8 +39,14 @@
           <span><b>Lenguajes:</b></span>
           <li v-for="lenguaje of lenguajes">
             <a :href="lenguaje.link" target="_blank"> {{lenguaje.nombre}} </a>
+            <span style="color: blue;"> : {{lenguaje.puntos}} </span>
+            <button @click="lenguaje.puntos++">+</button>
+            <button @click="lenguaje.puntos--">-</button>
           </li>
         </ul>
+        <span>Puntos totales:{{sumarPuntaje}}
+
+        </span>
       </div>
     </div>
   </body>
