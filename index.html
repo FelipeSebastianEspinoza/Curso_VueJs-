@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="elemento">
+        {{contenido}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const con=new Vue({
+            el:"#elemento",
+            data:{
+                contenido:"Hola Mundo"
+            }
+        })
+    </script>
+
+</body>
+</html>
