@@ -8,16 +8,13 @@
   <body>
     <div id="elemento">
       {{contenido}}
+      <ul>
+        <span><b>Lenguajes:</b></span>
+        <li v-for="lenguaje of lenguajes">
+          <a href=""> {{lenguaje}} </a>
+        </li>
+      </ul>
     </div>
-
-    <script>
-      const con = new Vue({
-        el: "#elemento",
-        data: {
-          contenido: "Hola Mundo",
-        },
-      });
-    </script>
 
     <!--Page preloader -->
     <div class="loader">
@@ -30,6 +27,16 @@
     <!--End page preloader-->
   </body>
 </html>
+
+<script>
+  const con = new Vue({
+    el: "#elemento",
+    data: {
+      contenido: "Hola Mundo",
+      lenguajes: ["Javascript", "Python", "Php"],
+    },
+  });
+</script>
 
 <style>
   .lds-facebook {
@@ -78,7 +85,6 @@
     loader.className += " hidden"; // class "loader hidden"
   });
 </script>
- 
 
 <style>
   .loader {
