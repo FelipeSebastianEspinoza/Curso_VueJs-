@@ -35,8 +35,35 @@
     <!---->
   </head>
   <body>
-    <div id="elemento">
-      <p>hola mundo</p>
+    <div id="elemento" class="container mt-5">
+      <div :class="[padding, colorFondo, colorTexto]">
+        <h3>
+          <b>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos
+            veritatis maxime, repellendus eius laudantium illo dolores mollitia
+            a optio unde ea dolor possimus. Iste placeat officiis totam
+            molestias dicta!
+          </b>
+        </h3>
+      </div>
+      <div
+        class="p-2"
+        :class="[colorTexto, 
+      {'bg-warning':cambioColor,'bg-success':!cambioColor}]"
+      >
+        <h3>
+          <b>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos
+            veritatis maxime, repellendus eius laudantium illo dolores mollitia
+            a optio unde ea dolor possimus. Iste placeat officiis totam
+            molestias dicta!
+          </b>
+        </h3>
+      </div>
+      <div class="form-group">
+        <input type="text" v-model="colorFondo" />
+        <button @click="cambioColorFunc">Cambio</button>
+      </div>
     </div>
   </body>
   <footer>
@@ -54,12 +81,5 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
   </footer>
 </html>
