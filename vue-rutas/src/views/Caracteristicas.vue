@@ -1,9 +1,9 @@
 <template>
-  <div class="about">
-    <h1>About</h1>
+  <div class="caracteristicas">
+    <h1>Caracteristicas</h1>
     <router-link
       v-for="(car, index) of listaCar"
-      :to="{ name: 'about', params: { id: car } }"
+      :to="{ name: 'caracteristicas', params: { id: car } }"
       :key="index"
     >
       {{ car }}
