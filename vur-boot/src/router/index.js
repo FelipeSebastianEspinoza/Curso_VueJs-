@@ -26,6 +26,11 @@ const routes = [
     name: "Card",
     component: () => import(/* webpackChunkName: "card" */ "../views/Card.vue"),
   },
+  {
+    path: "/formulario",
+    name: "Formulario",
+    component: () => import(/* webpackChunkName: "formulario" */ "../views/Formulario.vue"),
+  },
 ];
 
 const router = new VueRouter({

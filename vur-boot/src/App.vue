@@ -10,6 +10,7 @@
             <b-nav-item :to="{ name: 'About' }">About</b-nav-item>
             <b-nav-item :to="{ name: 'Grid' }">Grid</b-nav-item>
             <b-nav-item :to="{ name: 'Card' }">Card</b-nav-item>
+            <b-nav-item :to="{ name: 'Formulario' }">Formulario</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
